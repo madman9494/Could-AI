@@ -3,6 +3,8 @@ pragma solidity >=0.6.0 <0.7.0;
 
 import "hardhat/console.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import "hardhat/console.sol";
+import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 
 contract Proxy {
     IERC721 public immutable token;
