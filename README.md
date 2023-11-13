@@ -35,3 +35,11 @@ We will try to release our project in mainnet Polygon and start to attract NFT c
 
 Kudos to the team:
 ![photo_2021-10-24 12 17 47](https://user-images.githubusercontent.com/3356474/138591971-cfa26571-773f-478f-9a4c-f818a6ae6f15.jpeg)
+
+
+## One-click token issuance app
+
+Canisters:
+
+* token canister
+* token registry canister
