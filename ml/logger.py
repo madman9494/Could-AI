@@ -36,6 +36,17 @@ class Logger:
         self.loss_list = []
         self.log_file.flush()
 
+        def log_scores(self, loss_names):
+        loss_mean = np.array(self.loss_list).mean(axis=0)
+
+        loss_string = "; ".join(["%s - %.5f" % (name, value) for name, value in zip(loss_names, loss_mean)])
+        loss_string = str(self.epoch).zfill(self.zfill_num) + ") " + loss_string
+
+        print(loss_string, file=self.log_file)
+        self.loss_list = []
+        self.log_file.flush()
+
+
     def visualize_rec(self, inp, out):
         image = self.visualizer.visualize(inp['driving'], inp['source'], out)
         imageio.imsave(os.path.join(self.visualizations_dir, "%s-rec.png" % str(self.epoch).zfill(self.zfill_num)), image)
