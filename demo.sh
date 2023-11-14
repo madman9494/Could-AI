@@ -4,14 +4,15 @@ set -e
 
 # clear
 dfx stop
+dfx stop
 rm -rf .dfx
 
-ALICE_HOME=$(mktemp -d -t alice-temp)
-HOME=$ALICE_HOME
+# ALICE_HOME=$(mktemp -d -t alice-temp)
+# HOME=$ALICE_HOME
 
-ALICE_PUBLIC_KEY="principal \"$( \
-    HOME=$ALICE_HOME dfx identity get-principal
-)\""
+# ALICE_PUBLIC_KEY="principal \"$( \
+#     HOME=$ALICE_HOME dfx identity get-principal
+# )\""
 
 dfx start --background
 dfx canister create registry
