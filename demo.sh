@@ -7,6 +7,13 @@ dfx stop
 dfx stop
 rm -rf .dfx
 
+set -e
+
+# clear
+dfx stop
+dfx stop
+rm -rf .dfx
+
 # ALICE_HOME=$(mktemp -d -t alice-temp)
 # HOME=$ALICE_HOME
 
